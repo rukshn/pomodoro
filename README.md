@@ -18,7 +18,7 @@ You can either copy the code to your ~/.bashrc file or simply run
     -s short break
     [message] custom message to be displayed after timeout, make sure the message is under quotes
 
-###Long break and short break
+###Long breaks
   Long breaks are 15 minute breaks started by giving -l command, you will be notified after 15 minutes
   
 ###Short breaks
