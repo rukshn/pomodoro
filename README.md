@@ -28,7 +28,7 @@ There after
     pomo -l
   
 ###Short breaks
-  Long breaks are 5 minute breaks started by giving -l command, you will be notified after 5 minutes
+  Short breaks are 5 minute breaks started by giving -s command, you will be notified after 5 minutes
 
     pomo -s
 
