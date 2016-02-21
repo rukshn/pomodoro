@@ -3,6 +3,10 @@ A simple pomodoro shell script
 
 ![Screenshot](http://i.imgur.com/P53pj9z.png)
 
+*How you see notifications*
+
+![Screenshot](http://i.imgur.com/CQUuaBI.png)
+
 ##How to use
 
 You can either copy the code to your ~/.bashrc file or simply run
