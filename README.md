@@ -7,6 +7,10 @@ You can either copy the code to your ~/.bashrc file or simply run
 
     source pomodoro.sh && pomo
 
+There after 
+    
+    pomo
+
 ##Options
     pomo [option][message]
   
