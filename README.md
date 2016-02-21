@@ -25,8 +25,18 @@ There after
 ###Long breaks
   Long breaks are 15 minute breaks started by giving -l command, you will be notified after 15 minutes
   
+    pomo -l
+  
 ###Short breaks
   Long breaks are 5 minute breaks started by giving -l command, you will be notified after 5 minutes
+
+    pomo -s
+
+##Messages
+Custom messages to be shown after breaks
+
+    pomo -l 'time is up'
+    pomo 'time is up'
 
 Made it during my spare time. Forkit, improve it, star it, have fun.
 Inspired by [this](https://twitter.com/rob_dodson/status/695864071837470720)
