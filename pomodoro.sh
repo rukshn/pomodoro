@@ -7,7 +7,7 @@ function pomo {
     ORANGE='\033[0;33m'
     printf "${ORANGE}POMODORO in YA TERMINAL${NC}\n"
 
-    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
         echo "usage: pomo       25 minute cycle"
         echo -e "   or: pomo [break]['_message_']  see options below\n"
         echo "Options:"
@@ -18,7 +18,7 @@ function pomo {
         return
     fi
 
-    if [ "$1" = "-v" ] || [ "$1" = "--version" ]; then
+    if [[ "$1" == "-v" ]] || [[ "$1" == "--version" ]]; then
         echo -e "${ORANGE}POMODORO TIMER BY RUKY"
         echo "  v: 1"
         echo "  twitter: @justruky"
@@ -68,10 +68,10 @@ function pomo {
     echo -e "${RED}TIMER SET FOR ${$(($TIMER/60))} MINUTES"
 
     # LINUX users
-    if [ "$(uname)" = "Linux" ]; then
+    if [[ "$(uname)" == "Linux" ]]; then
         eval "(sleep $TIMER && notify-send '$TITLE' '$MESSAGE' --icon=$ICON && $BEEP &)"
     # MAC users
-    elif [ "$(uname)" = "Darwin" ]; then
+    elif [[ "$(uname)" == "Darwin" ]]; then
         eval "(sleep $TIMER && terminal-notifier -message '$MESSAGE' -title 'Pomodoro' --subtitle '$TITLE' &)"
     else
         echo "Sorry! Only Linux or Mac";
