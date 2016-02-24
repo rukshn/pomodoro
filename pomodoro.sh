@@ -63,10 +63,10 @@ function pomo {
     fi
     
     # LINUX users
-    if [ "$(uname)" == "Linux" ]; then
+    if [[ "$(uname)" == "Linux" ]]; then
         eval "(sleep $TIMER && notify-send '$TITLE' '$MESSAGE' --icon=$ICON && $BEEP &)"
     # MAC users
-    elif [ "$(uname)" == "Darwin" ]; then
+    elif [[ "$(uname)" == "Darwin" ]]; then
         eval "(sleep $TIMER && terminal-notifier -message '$MESSAGE' -title 'Pomodoro' --subtitle '$TITLE' &)"
     else
         echo "Sorry! Only Linux or Mac";
