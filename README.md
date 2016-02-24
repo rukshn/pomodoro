@@ -26,6 +26,7 @@ There after
     -h help screen
     -l long break
     -s short break
+    -d duration in minutes
     [message] custom message to be displayed after timeout, make sure the message is under quotes
 
 ###Long breaks
@@ -37,6 +38,12 @@ There after
   Short breaks are 5 minute breaks started by giving -s command, you will be notified after 5 minutes
 
     pomo -s
+
+###Custom duration
+  Sets custom duration of timer in minutes by giving -d command
+
+    # 45 minute timer
+    pomo -d 45
 
 ##Messages
 Custom messages to be shown after breaks
