@@ -27,7 +27,7 @@ function pomo {
         return
     fi
 
-    TITLE="PROMODO TIMER"
+    TITLE="POMODORO TIMER"
     ICON="face-cool"
     BEEP="_alarm 400 200"
     TIMER=1500
