@@ -72,15 +72,19 @@ function pomo {
         eval "(sleep $TIMER && notify-send '$TITLE' '$MESSAGE' --icon=$ICON && $BEEP &)"
     # MAC users
     elif [[ "$(uname)" == "Darwin" ]]; then
-        eval "(sleep $TIMER && terminal-notifier -message '$MESSAGE' -title 'Pomodoro' --subtitle '$TITLE' &)"
+        eval "(sleep $TIMER && terminal-notifier -message '$MESSAGE' -title 'Pomodoro' --subtitle '$TITLE' && $BEEP &)"
     else
         echo "Sorry! Only Linux or Mac";
     fi
 }
 
 _alarm() {
-    ( \speaker-test --frequency $1 --test sine )&
-    pid=$!
-    \sleep 0.${2}s
-    \kill -9 $pid
+    if [[ "$(uname)" == "Linux" ]]; then
+        ( \speaker-test --frequency $1 --test sine )&
+        pid=$!
+        \sleep 0.${2}s
+        \kill -9 $pid
+    elif [[ "$(uname)" == "Darwin" ]]; then
+        say -v bells 'beep'
+    fi
 }
