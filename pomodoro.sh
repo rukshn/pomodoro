@@ -29,7 +29,6 @@ function pomo {
 
     TITLE="PROMODO TIMER"
     ICON="face-cool"
-    BEEP="_alarm 400 200"
     TIMER=1500
 
     while :
@@ -69,7 +68,7 @@ function pomo {
 
     # LINUX users
     if [[ "$(uname)" == "Linux" ]]; then
-        eval "(sleep $TIMER && notify-send '$TITLE' '$MESSAGE' --icon=$ICON && $BEEP &)"
+        eval "(sleep $TIMER && notify-send '$TITLE' '$MESSAGE' --icon=$ICON && paplay notification.ogg >/dev/null >&1 &)"
     # MAC users
     elif [[ "$(uname)" == "Darwin" ]]; then
         eval "(sleep $TIMER && terminal-notifier -message '$MESSAGE' -title 'Pomodoro' --subtitle '$TITLE' &)"
@@ -78,9 +77,3 @@ function pomo {
     fi
 }
 
-_alarm() {
-    ( \speaker-test --frequency $1 --test sine )&
-    pid=$!
-    \sleep 0.${2}s
-    \kill -9 $pid
-}
