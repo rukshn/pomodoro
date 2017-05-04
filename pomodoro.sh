@@ -28,6 +28,7 @@ function pomo {
     fi
 
     TITLE="POMODORO TIMER"
+    MESSAGE=""
     ICON="face-cool"
     BEEP="_alarm 400 200"
     TIMER=1500
