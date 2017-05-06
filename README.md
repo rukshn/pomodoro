@@ -7,7 +7,7 @@ A simple pomodoro shell script
 
 ![Screenshot](http://i.imgur.com/CQUuaBI.png)
 
-##How to use
+## How to use
 
 You can either copy the code to your ~/.bashrc file or simply run
 
@@ -17,7 +17,7 @@ There after
     
     pomo
 
-##Options
+## Options
     pomo [option][message]
   
   Options
@@ -29,23 +29,23 @@ There after
     -d duration in minutes
     [message] custom message to be displayed after timeout, make sure the message is under quotes
 
-###Long breaks
+### Long breaks
   Long breaks are 15 minute breaks started by giving -l command, you will be notified after 15 minutes
   
     pomo -l
   
-###Short breaks
+### Short breaks
   Short breaks are 5 minute breaks started by giving -s command, you will be notified after 5 minutes
 
     pomo -s
 
-###Custom duration
+### Custom duration
   Sets custom duration of timer in minutes by giving -d command
 
     # 45 minute timer
     pomo -d 45
 
-##Messages
+## Messages
 Custom messages to be shown after breaks
 
     pomo -l 'time is up'
