@@ -67,6 +67,7 @@ function pomo {
     fi
 
     echo -e "${RED}TIMER SET FOR $(($TIMER/60)) MINUTES"
+    echo -e "${RED}TIMER SET TILL $(date -v +$(($TIMER/60))M)"
 
     # LINUX users
     if [[ "$(uname)" == "Linux" ]]; then
