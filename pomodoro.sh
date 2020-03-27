@@ -19,8 +19,8 @@ function pomo {
     fi
 
     if [[ "$1" == "-v" ]] || [[ "$1" == "--version" ]]; then
-        echo -e "${ORANGE}POMODORO TIMER BY RUKY"
-        echo "  v: 1"
+        echo -e "${ORANGE}POMODORO TIMER BY RUKSHAN"
+        echo "  v: 1.0.0.1"
         echo "  twitter: @justruky"
         echo "  blog: rukshn.github.io"
         echo -e "  email: arkruka[@]gmail.com"
@@ -41,12 +41,12 @@ function pomo {
             shift 2
             ;;
         -l | --long-break)
-            MESSAGE="Long break over, back to work"
+            MESSAGE="Long is break over, back to work"
             TIMER=900
             shift
             ;;
         -s | --short-break)
-            MESSAGE="Short break over, back to work"
+            MESSAGE="Short is break over, back to work"
             TIMER=300
             shift
             ;;
@@ -63,7 +63,7 @@ function pomo {
     if [ -n "$1" ]; then
         MESSAGE="$1"
     elif [ -z "$MESSAGE" ]; then
-        MESSAGE="Time to take a break"
+        MESSAGE="It's time to take a break"
     fi
 
     echo -e "${RED}TIMER SET FOR $(($TIMER/60)) MINUTES"
