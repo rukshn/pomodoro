@@ -63,7 +63,7 @@ function pomo {
     if [ -n "$1" ]; then
         MESSAGE="$1"
     elif [ -z "$MESSAGE" ]; then
-        MESSAGE="It's time to take a break"
+        MESSAGE="Time to take a break"
     fi
 
     echo -e "${RED}TIMER SET FOR $(($TIMER/60)) MINUTES"
